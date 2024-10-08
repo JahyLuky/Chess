@@ -1,0 +1,1 @@
+build/square.o: src/square.cpp src/square.h src/piece.h src/position.h

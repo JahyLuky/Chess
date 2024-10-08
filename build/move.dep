@@ -1,0 +1,3 @@
+build/move.o: src/move.cpp src/move.h src/board.h src/square.h \
+  src/piece.h src/position.h src/pawn.h src/queen.h src/king.h \
+  src/rook.h src/bishop.h src/knight.h src/player.h

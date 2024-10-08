@@ -38,4 +38,6 @@ public:
      * @return false -> wrong position
      */
     bool extract_input(const std::string &start, Position &old_pos);
+
+    bool start_parse (std::string &input, std::string &start, std::string &end);
 };

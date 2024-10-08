@@ -1,0 +1,1 @@
+build/queen.o: src/queen.cpp src/queen.h src/piece.h src/position.h

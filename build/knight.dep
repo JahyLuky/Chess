@@ -1,0 +1,1 @@
+build/knight.o: src/knight.cpp src/knight.h src/piece.h src/position.h

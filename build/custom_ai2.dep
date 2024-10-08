@@ -1,0 +1,4 @@
+build/custom_ai2.o: src/custom_ai2.cpp src/custom_ai2.h src/player.h \
+  src/board.h src/square.h src/piece.h src/position.h src/pawn.h \
+  src/queen.h src/king.h src/rook.h src/bishop.h src/knight.h src/move.h \
+  src/rules.h src/validate.h

@@ -3,11 +3,14 @@
 #include "minimax.h"
 #include "custom_ai.h"
 #include "custom_ai2.h"
+#include "network_manager.h"
+#include "online_player.h"
 
 void Menu::print_menu() const {
     std::cout << "------MENU------\nChoose your type of game:\n";
     std::cout << "(t):\tTutorial" << std::endl;
     std::cout << "(h):\tPlayer vs Player" << std::endl;
+    std::cout << "(o):\tOnline: Player vs Player" << std::endl;
     std::cout << "(a):\tPlayer vs AI" << std::endl;
     std::cout << "(l):\tLoad game" << std::endl;
     std::cout << "(e):\tEnd of program" << std::endl;
@@ -21,6 +24,25 @@ void Menu::start_game() {
     std::cout << "(save) for saving your current game" << std::endl;
     Board board;
     HumanPlayer white('W'), black('B');
+    Application app;
+    board.init_board();
+    white.fill_pieces(board);
+    black.fill_pieces(board);
+    app.game(board, white, black, false);
+}
+
+// TODO: add changing colors
+// White local player, black online player
+void Menu::start_online_game() {
+    std::cout << "ONLINE!" << std::endl;
+    std::cout << "Player vs Player" << std::endl;
+    std::cout << "Commands:" << std::endl;
+    std::cout << "(draw) for draw" << std::endl;
+    std::cout << "(resign) for resign" << std::endl;
+    std::cout << "(save) for saving your current game" << std::endl;
+    Board board;
+    HumanPlayer white('W');
+    OnlinePlayer black('B');
     Application app;
     board.init_board();
     white.fill_pieces(board);
@@ -181,6 +203,10 @@ void Menu::run() {
                 break;
             case 'h': // Game vs human
                 start_game();
+                print_menu();
+                break;
+            case 'o': // Online game vs human
+                start_online_game();
                 print_menu();
                 break;
             case 'a': // Game vs AI

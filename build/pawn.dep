@@ -1,0 +1,1 @@
+build/pawn.o: src/pawn.cpp src/pawn.h src/piece.h src/position.h

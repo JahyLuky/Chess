@@ -1,0 +1,1 @@
+build/position.o: src/position.cpp src/position.h

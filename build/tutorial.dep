@@ -1,0 +1,5 @@
+build/tutorial.o: src/tutorial.cpp src/tutorial.h src/file_manager.h \
+  src/board.h src/square.h src/piece.h src/position.h src/pawn.h \
+  src/queen.h src/king.h src/rook.h src/bishop.h src/knight.h \
+  src/player.h src/human_player.h src/application.h src/rules.h \
+  src/move.h src/game_rules.h

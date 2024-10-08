@@ -1,0 +1,1 @@
+build/network_manager.o: src/network_manager.cpp src/network_manager.h

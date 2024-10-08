@@ -1,0 +1,4 @@
+build/online_player.o: src/online_player.cpp src/online_player.h \
+  src/player.h src/board.h src/square.h src/piece.h src/position.h \
+  src/pawn.h src/queen.h src/king.h src/rook.h src/bishop.h src/knight.h \
+  src/network_manager.h src/input_handler.h

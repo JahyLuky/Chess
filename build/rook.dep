@@ -1,0 +1,1 @@
+build/rook.o: src/rook.cpp src/rook.h src/piece.h src/position.h

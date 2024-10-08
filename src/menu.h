@@ -17,6 +17,10 @@ public:
      */
     void start_game();
     /**
+     * @brief Starts game with 2 human players
+     */
+    void start_online_game();
+    /**
      * @brief Starts game with AI
      * @return TRUE -> game finished, FALSE -> game didn't finish
      */

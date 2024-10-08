@@ -1,0 +1,4 @@
+build/human_player.o: src/human_player.cpp src/human_player.h \
+  src/player.h src/board.h src/square.h src/piece.h src/position.h \
+  src/pawn.h src/queen.h src/king.h src/rook.h src/bishop.h src/knight.h \
+  src/input_handler.h

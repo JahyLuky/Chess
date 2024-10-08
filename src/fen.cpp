@@ -107,16 +107,16 @@ std::string FEN::get_FEN(Board &board, const Player &white, const Player &black)
 
 bool FEN::correct_FEN_pieces(const std::string &str) {
     int count = 0;
-    int square_cnt = 0;
+    //int square_cnt = 0;
     for (char c: str) {
         if (c == '/') {
             count++;
-            square_cnt = 0;
+            //square_cnt = 0;
         } else if (c == 'r' || c == 'n' || c == 'b' || c == 'k' || c == 'q' || c == 'p'
                    || c == 'R' || c == 'N' || c == 'B' || c == 'K' || c == 'Q' || c == 'P') {
-            square_cnt++;
+            //square_cnt++;
         } else if (std::isdigit(c)) {
-            square_cnt = c - '0';
+            //square_cnt = c - '0';
         } else {
             return false;
         }

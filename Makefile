@@ -6,7 +6,7 @@ CXX = g++
 
 # Specifies basic compilation flags, including the C++17 standard to use, optimization level, debugging information,
 # undefined behavior sanitizer and warnings to display
-BASIC_FLAGS = -std=c++17 -O2 -g -fsanitize=undefined -Wall -pedantic
+BASIC_FLAGS = -std=c++17 -O2 -g -fsanitize=undefined -Wall -pedantic -lcurl
 
 # List of files to include in the zip file created by 'make zip'
 ZIP = Makefile Doxyfile DOCUMENTATION.md zadani.txt prohlaseni.txt \

@@ -1,4 +1,0 @@
--MM
--MT
-build/network_manager.o
-src/network_manager.cpp

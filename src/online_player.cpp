@@ -34,9 +34,11 @@ bool OnlinePlayer::get_move(Board &board) {
     NetworkManager server;
     std::vector<char> response;
 
-    // TODO: change later
+    // TODO: localhost for development is used
     std::string url = "http://127.0.0.1:8080";
-    std::string payload = "BLACK plays!\nWhat is your move?.";
+    std::string payload = "What is your move?.";
+
+    // Ask online player for coordinates
     curl_global_init(CURL_GLOBAL_ALL);
     CURL *curl = curl_easy_init();
 
@@ -57,7 +59,8 @@ bool OnlinePlayer::get_move(Board &board) {
         }
     }
     std::string online_input {response.begin(), response.end()}; 
-    std::cout << "Converted input:\n" << online_input << std::endl;
+    std::cout << online_input << std::endl;
+    //std::cout << "Converted input:\n" << online_input << std::endl;
 
     // TODO: split online_input into 'start' and 'end'
     std::string str {response.begin(), response.end()};

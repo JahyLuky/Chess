@@ -1,3 +1,4 @@
-build/king.o: src/king.cpp src/king.h src/piece.h src/position.h \
-  src/board.h src/square.h src/pawn.h src/queen.h src/rook.h \
-  src/bishop.h src/knight.h
+-MM
+-MT
+build/king.o
+src/king.cpp

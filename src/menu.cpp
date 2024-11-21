@@ -31,7 +31,6 @@ void Menu::start_game() {
     app.game(board, white, black, false);
 }
 
-// TODO: add changing colors
 // White local player, black online player
 void Menu::start_online_game() {
     std::cout << "ONLINE!" << std::endl;

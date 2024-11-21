@@ -58,8 +58,7 @@ bool Input_handler::extract_input(const std::string &start, Position &old_pos) {
     int col = coordinates_to_int(start[0]);
     int row = check_col(start[1]);
 
-    if (row == -1 || col == -1
-        || start.length() > 2) {
+    if (row == -1 || col == -1 || start.length() > 2) {
         return false;
     }
     old_pos.row_ = 8 - row;
@@ -72,27 +71,26 @@ bool Input_handler::start_parse (std::string &input, std::string &start, std::st
 
     bool foundStart = false;
 
-    size_t wordStart = 0;  // To track the beginning of a word
+    size_t wordStart = 0;
     bool inWord = false;
 
     for (size_t i = 0; i <= len; ++i) {
         if (i < len && !std::isspace(input[i])) {
             if (!inWord) {
-                wordStart = i;  // Mark the start of the word
+                wordStart = i;
                 inWord = true;
             }
         } else {
             if (inWord) {
-                // We've reached the end of a word
                 std::string word = input.substr(wordStart, i - wordStart);
                 if (!foundStart) {
-                    start = word;  // First word goes into `start`
+                    start = word;
                     foundStart = true;
                 } else {
-                    end = word;    // Second word goes into `end`
-                    break;         // Stop processing after the second word
+                    end = word;
+                    break;
                 }
-                inWord = false;  // Reset inWord for the next potential word
+                inWord = false;
             }
         }
     }

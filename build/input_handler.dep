@@ -1,2 +1,4 @@
-build/input_handler.o: src/input_handler.cpp src/input_handler.h \
-  src/position.h
+-MM
+-MT
+build/input_handler.o
+src/input_handler.cpp

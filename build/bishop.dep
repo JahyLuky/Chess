@@ -1,1 +1,4 @@
-build/bishop.o: src/bishop.cpp src/bishop.h src/piece.h src/position.h
+-MM
+-MT
+build/bishop.o
+src/bishop.cpp

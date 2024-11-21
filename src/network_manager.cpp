@@ -41,7 +41,7 @@ std::vector<char> NetworkManager::request(CURL *curl, const std::string &url, co
     }
 
     // Log the time taken
-    std::chrono::duration<double> elapsed = end - start;
+    //std::chrono::duration<double> elapsed = end - start;
     //std::cout << "Request took: " << elapsed.count() << " s\n";
 
     return response;
